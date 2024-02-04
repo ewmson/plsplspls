@@ -22,10 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <header>🥺Will you be my Valentine?🥺</header>
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

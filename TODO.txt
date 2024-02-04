@@ -1,0 +1,8 @@
+- themes and theme picker https://daisyui.com/docs/themes/
+- come up with dumb ideas
+    - fake captcha
+    - wait 5 seconds
+    - current wordle
+    - ?????
+
+- fix button start
