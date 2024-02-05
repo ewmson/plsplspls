@@ -9,8 +9,9 @@ export function MainScreen(props: Props) {
   if (yesClicked) {
     return (
       <>
-        <header>🥺Will you be my Valentine?🥺</header>
-        <main>OMG YAY</main>
+        <div className="text-center">
+          <h1 className="text-large">😘 OMG YAY 😘</h1>
+        </div>
       </>
     );
   }
@@ -25,8 +26,6 @@ export function MainScreen(props: Props) {
         <YesButton countNo={countNo} setYesClicked={setYesClicked}></YesButton>
         <NoButton countNo={countNo} setCountNo={setCountNo}></NoButton>
       </main>
-      <div>Yes clicked {yesClicked ? "True" : "False"}</div>
-      <div>Count No {countNo} </div>
     </div>
   );
 }
