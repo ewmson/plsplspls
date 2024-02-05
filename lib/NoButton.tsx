@@ -30,7 +30,7 @@ function makeDialog(noCount: number, text: string): ModalListElem {
 
 const MODAL_LIST: Array<ModalListElem> = [
   {
-    noCount: 9,
+    noCount: 4,
     modalGenerator: (incrementNoCount, modalDisplayed) => (
       <WaitTimeModal
         timeToWait={4}
@@ -41,7 +41,7 @@ const MODAL_LIST: Array<ModalListElem> = [
     ),
   },
   {
-    noCount: 19,
+    noCount: 9,
     modalGenerator: (incrementNoCount, modalDisplayed) => (
       <FakeCaptchaModal
         incrementNoCount={incrementNoCount}
@@ -52,7 +52,7 @@ const MODAL_LIST: Array<ModalListElem> = [
     ),
   },
   {
-    noCount: 24,
+    noCount: 15,
     modalGenerator: (incrementNoCount, modalDisplayed) => (
       <WaitTimeModal
         timeToWait={8}
@@ -63,7 +63,7 @@ const MODAL_LIST: Array<ModalListElem> = [
     ),
   },
   {
-    noCount: 31,
+    noCount: 25,
     modalGenerator: (incrementNoCount, modalDisplayed) => (
       <FakeCaptchaModal
         incrementNoCount={incrementNoCount}
@@ -74,7 +74,7 @@ const MODAL_LIST: Array<ModalListElem> = [
     ),
   },
   {
-    noCount: 39,
+    noCount: 33,
     modalGenerator: (incrementNoCount, modalDisplayed) => (
       <WordleModal
         incrementNoCount={incrementNoCount}
@@ -82,11 +82,11 @@ const MODAL_LIST: Array<ModalListElem> = [
       />
     ),
   },
-  makeDialog(49, "Okay............"),
-  makeDialog(50, "I get it"),
-  makeDialog(51, "I thought we had something 😭"),
-  makeDialog(52, "But I guess that was all in my head"),
-  makeDialog(53, "Ill let you go now 💔"),
+  makeDialog(40, "Okay............"),
+  makeDialog(41, "I get it"),
+  makeDialog(42, "I thought we had something 😭"),
+  makeDialog(43, "But I guess that was all in my head"),
+  makeDialog(44, "Ill let you go now 💔"),
 ];
 export function NoButton({ countNo, setCountNo }: Props) {
   const [displayModal, setDisplayModal] = useState(false);

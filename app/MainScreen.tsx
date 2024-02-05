@@ -23,7 +23,7 @@ export function MainScreen(props: Props) {
       </>
     );
   }
-  if (countNo === 54) {
+  if (countNo === 45) {
     return (
       <div className="flex flex-col text-center items-center justify-center">
         <h1 className="text-2xl">
