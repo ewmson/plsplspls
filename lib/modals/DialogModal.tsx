@@ -5,7 +5,7 @@ interface Props extends RequiredModalProps {
 }
 export function DialogModal({ incrementNoCount, text }: Props) {
   return (
-    <dialog id="no_modal" className="modal modal-bottom sm:modal-middle">
+    <dialog id="no_modal" className="modal modal-bottom sm:modal-middle" open>
       <div className="modal-box">
         <form method="dialog">
           {/* if there is a button in form, it will close the modal */}

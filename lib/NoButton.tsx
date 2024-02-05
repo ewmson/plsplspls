@@ -22,6 +22,7 @@ function makeDialog(noCount: number, text: string): ModalListElem {
         incrementNoCount={incrementNoCount}
         modalDisplayed={modalDisplayed}
         text={text}
+        key={noCount}
       />
     ),
   };
@@ -35,11 +36,12 @@ const MODAL_LIST: Array<ModalListElem> = [
         timeToWait={4}
         incrementNoCount={incrementNoCount}
         modalDisplayed={modalDisplayed}
+        text={"Are you sure you wanted to say no?!?"}
       />
     ),
   },
   {
-    noCount: 14,
+    noCount: 19,
     modalGenerator: (incrementNoCount, modalDisplayed) => (
       <FakeCaptchaModal
         incrementNoCount={incrementNoCount}
@@ -50,17 +52,18 @@ const MODAL_LIST: Array<ModalListElem> = [
     ),
   },
   {
-    noCount: 19,
+    noCount: 24,
     modalGenerator: (incrementNoCount, modalDisplayed) => (
       <WaitTimeModal
         timeToWait={8}
         incrementNoCount={incrementNoCount}
         modalDisplayed={modalDisplayed}
+        text={"Are you REALLY REALLY sure you wanted to say no?!?"}
       />
     ),
   },
   {
-    noCount: 24,
+    noCount: 31,
     modalGenerator: (incrementNoCount, modalDisplayed) => (
       <FakeCaptchaModal
         incrementNoCount={incrementNoCount}
@@ -71,7 +74,7 @@ const MODAL_LIST: Array<ModalListElem> = [
     ),
   },
   {
-    noCount: 29,
+    noCount: 39,
     modalGenerator: (incrementNoCount, modalDisplayed) => (
       <WordleModal
         incrementNoCount={incrementNoCount}
@@ -79,11 +82,11 @@ const MODAL_LIST: Array<ModalListElem> = [
       />
     ),
   },
-  makeDialog(39, "Okay............"),
-  makeDialog(40, "I get it"),
-  makeDialog(41, "I thought we had something 😭"),
-  makeDialog(42, "But I guess that was all in my head"),
-  makeDialog(43, "Ill let you go now 💔"),
+  makeDialog(49, "Okay............"),
+  makeDialog(50, "I get it"),
+  makeDialog(51, "I thought we had something 😭"),
+  makeDialog(52, "But I guess that was all in my head"),
+  makeDialog(53, "Ill let you go now 💔"),
 ];
 export function NoButton({ countNo, setCountNo }: Props) {
   const [displayModal, setDisplayModal] = useState(false);
@@ -95,7 +98,10 @@ export function NoButton({ countNo, setCountNo }: Props) {
 
   const showModal = useCallback(() => {
     setDisplayModal(true);
-    (document.getElementById("no_modal") as HTMLDialogElement)?.showModal();
+    const elem = document.getElementById("no_modal") as HTMLDialogElement;
+    if (!elem.open) {
+      elem?.showModal();
+    }
   }, []);
 
   let modalToUse: JSX.Element | undefined = undefined;

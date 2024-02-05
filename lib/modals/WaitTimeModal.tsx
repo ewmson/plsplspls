@@ -4,11 +4,13 @@ import { RequiredModalProps } from "../types/RequiredModalProps";
 
 interface Props extends RequiredModalProps {
   timeToWait: number;
+  text: string;
 }
 export function WaitTimeModal({
   timeToWait,
   incrementNoCount,
   modalDisplayed,
+  text,
 }: Props) {
   const [timeElapsed, setTimeElapsed] = useState(0);
   useInterval(() => {
@@ -28,9 +30,7 @@ export function WaitTimeModal({
               ✕
             </button>
           </form>
-          <h3 className="font-bold text-lg">
-            Are you sure you wanted to say no?!?
-          </h3>
+          <h3 className="font-bold text-lg">{text}</h3>
           <p className="py-4">
             Please Wait {Math.max(0, timeToWait - timeElapsed)} seconds to think
             about it

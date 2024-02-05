@@ -2,7 +2,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { RequiredModalProps } from "../types/RequiredModalProps";
 import { wordleAnswers } from "../wordleAnswers/wordleAnswers";
-import { headers } from "next/headers";
 
 async function getWordleAnswer(date: Date) {
   const offset = date.getTimezoneOffset();
@@ -43,18 +42,17 @@ export function WordleModal({ incrementNoCount, modalDisplayed }: Props) {
           Why don't you think about it while doing wordle?.
         </h3>
         <div>
-          <p>
-            Enter the{" "}
-            <a
-              href="https://www.nytimes.com/games/wordle/index.html"
-              className="link link-primary"
-              target="blank"
-            >
-              wordle
-            </a>{" "}
-            solution for today
-          </p>
+          Enter the{" "}
+          <a
+            href="https://www.nytimes.com/games/wordle/index.html"
+            className="link link-success underline"
+            target="blank"
+          >
+            wordle
+          </a>{" "}
+          solution for today
         </div>
+        <br></br>
         <div>
           <input
             type="text"

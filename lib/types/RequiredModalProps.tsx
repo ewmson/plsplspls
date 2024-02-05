@@ -1,4 +1,4 @@
-export interface RequiredModalProps{
-    incrementNoCount: () => void;
-    modalDisplayed: boolean;
+export interface RequiredModalProps {
+  incrementNoCount: () => void;
+  modalDisplayed: boolean;
 }
