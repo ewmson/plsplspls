@@ -1,4 +1,5 @@
 "use client";
+import { NoButton } from "@/lib/NoButton";
 import { Dispatch, SetStateAction, useState } from "react";
 
 interface Props {}
@@ -18,13 +19,9 @@ export function MainScreen(props: Props) {
     <>
       <header>🥺Will you be my Valentine?🥺</header>
       <main>
+        {/* <button className="btn btn-error">HI</button> */}
         <YesButton countNo={countNo} setYesClicked={setYesClicked}></YesButton>
-        <button
-          className="btn btn-error"
-          onClick={() => setCountNo((count) => count + 1)}
-        >
-          No 😭
-        </button>
+        <NoButton countNo={countNo} setCountNo={setCountNo}></NoButton>
       </main>
       <div>Yes clicked {yesClicked ? "True" : "False"}</div>
       <div>Count No {countNo} </div>
@@ -41,7 +38,7 @@ function YesButton({ countNo, setYesClicked }: YesProps) {
   if (countNo == 0) {
     innerText = "Yes ❤️";
   } else {
-    innerText = "Please 🥺\n".repeat(countNo);
+    innerText = "Please 🥺👉👈\n".repeat(countNo);
   }
 
   return (
