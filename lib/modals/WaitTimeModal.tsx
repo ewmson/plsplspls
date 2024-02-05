@@ -32,7 +32,8 @@ export function WaitTimeModal({
             Are you sure you wanted to say no?!?
           </h3>
           <p className="py-4">
-            Please Wait {Math.max(0, timeToWait - timeElapsed)} seconds
+            Please Wait {Math.max(0, timeToWait - timeElapsed)} seconds to think
+            about it
           </p>
           <div className="modal-action">
             <form method="dialog">

@@ -108,7 +108,7 @@ export function NoButton({ countNo, setCountNo }: Props) {
     <>
       {modalToUse}
       <button
-        className="btn btn-error"
+        className="btn btn-error w-64"
         onClick={() =>
           requireModal({ incrementNoCount, showModal, modalToUse })
         }
