@@ -14,7 +14,7 @@ export function MainScreen(props: Props) {
       <>
         <div className="flex flex-col text-center items-center justify-center">
           <div>
-            <h1 className="text-large">😘 OMG YAY 😘</h1>
+            <h1 className="text-2xl">😘 OMG YAY 😘</h1>
           </div>
           <div>
             <Image src={moreYay} alt="Image of my joy"></Image>
@@ -23,10 +23,10 @@ export function MainScreen(props: Props) {
       </>
     );
   }
-  if (countNo === 55) {
+  if (countNo === 54) {
     return (
       <div className="flex flex-col text-center items-center justify-center">
-        <h1 className="text-large">
+        <h1 className="text-2xl">
           😞 Please just let me be alone for a bit 💔
         </h1>
         <Image src={sadnessGif} alt="Image of my despair"></Image>
@@ -37,7 +37,7 @@ export function MainScreen(props: Props) {
   return (
     <div className="text-center">
       <header>
-        <h1>🥺Will you be my Valentine?🥺</h1>
+        <h1 className="text-2xl">🥺Will you be my Valentine?🥺</h1>
       </header>
       <main>
         {/* <button className="btn btn-error">HI</button> */}
