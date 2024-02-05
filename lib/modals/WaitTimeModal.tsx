@@ -32,7 +32,8 @@ export function WaitTimeModal({
           </form>
           <h3 className="font-bold text-lg">{text}</h3>
           <p className="py-4">
-            Please Wait {Math.max(0, timeToWait - timeElapsed)} seconds to think
+            Please Wait {Math.max(0, timeToWait - timeElapsed)}{" "}
+            {timeToWait - timeElapsed === 1 ? "second" : "seconds"} to think
             about it
           </p>
           <div className="modal-action">
