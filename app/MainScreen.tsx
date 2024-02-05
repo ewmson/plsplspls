@@ -1,6 +1,9 @@
 "use client";
 import { NoButton } from "@/lib/NoButton";
 import { Dispatch, SetStateAction, useState } from "react";
+import sadnessGif from "@/public/sadnessGif.gif";
+import moreYay from "@/public/moreYay.gif";
+import Image from "next/image";
 
 interface Props {}
 export function MainScreen(props: Props) {
@@ -9,10 +12,25 @@ export function MainScreen(props: Props) {
   if (yesClicked) {
     return (
       <>
-        <div className="text-center">
-          <h1 className="text-large">😘 OMG YAY 😘</h1>
+        <div className="flex flex-col text-center items-center justify-center">
+          <div>
+            <h1 className="text-large">😘 OMG YAY 😘</h1>
+          </div>
+          <div>
+            <Image src={moreYay} alt="Image of my joy"></Image>
+          </div>
         </div>
       </>
+    );
+  }
+  if (countNo === 55) {
+    return (
+      <div className="flex flex-col text-center items-center justify-center">
+        <h1 className="text-large">
+          😞 Please just let me be alone for a bit 💔
+        </h1>
+        <Image src={sadnessGif} alt="Image of my despair"></Image>
+      </div>
     );
   }
 
