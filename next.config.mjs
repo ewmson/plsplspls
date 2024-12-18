@@ -4,7 +4,6 @@ const nextConfig = {
   images: { unoptimized: true },
   reactStrictMode: true,
   swcMinify: true,
-  basePath: "/plsplspls",
 };
 
 export default nextConfig;
