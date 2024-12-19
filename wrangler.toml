@@ -3,3 +3,6 @@ name = "plsplsplsplspls"
 compatibility_date = "2024-09-23"
 compatibility_flags = ["nodejs_compat"]
 assets = { directory = ".worker-next/assets", binding = "ASSETS" }
+[[kv_namespaces]]
+binding = "NEXT_CACHE_WORKERS_KV"
+id = "b528b7417816472fa0ac10d3c7e6058a"
