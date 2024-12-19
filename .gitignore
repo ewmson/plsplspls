@@ -30,6 +30,7 @@ next-env.d.ts
 
 # next.js
 /.next/
+/.worker-next/
 /out/
 
 # production
